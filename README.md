@@ -5,6 +5,12 @@
 * `C` : The `Ctrl` key
 * `Leader` : The `,` key.
 
+### Files
+* **Save:** `,w`
+* **Quit:** `,q`
+* **Save & Quit:** `,wq`
+* **Rename File:** `,n`
+
 ### Navigation
 
 * **Page Forward:** `<C-b>`
@@ -31,7 +37,6 @@
 
 ### Misc.
 
-* **Rename File:** `,n`
 
 ## Plugins 
 

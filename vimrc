@@ -209,3 +209,11 @@ function! RenameFile()
 	endif
 endfunction
 map <Leader>n :call RenameFile()<cr>
+
+
+""""""""""""""
+" Quick Save "
+""""""""""""""
+map <Leader>w :w<cr>
+map <Leader>q :q!<cr>
+map <Leader>wq :wq<cr>
