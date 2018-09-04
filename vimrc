@@ -96,27 +96,45 @@ autocmd BufReadPost *
 
 
 
+""""""""
+" CODE "
+""""""""
 
+" Rename Symbol ,e
+autocmd FileType ruby vnoremap <leader>e :RRenameLocalVariable<cr>
+autocmd FileType typescript nmap <buffer> <Leader>e <Plug>(TsuquyomiRenameSymbol)
+autocmd FileType typescript.jsx nmap <buffer> <Leader>e <Plug>(TsuquyomiRenameSymbol)
 
+" Extract Variable ,v
+autocmd FileType ruby vnoremap <leader>v :RExtractLocalVariable<cr>
 
+" Extract Constant ,c
+autocmd FileType ruby vnoremap <leader>c  :RExtractConstant<cr>
+
+" Extract Method ,m
+autocmd FileType ruby noremap <leader>m  :RExtractMethod<cr>
+
+" Extract Function ,f
 
 """"""""""""""
 " TYPESCRIPT "
 """"""""""""""
-"
+
 " Set .(j)sx filetypes as typescript.jsx
-"
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
 
 let g:tsuquyomi_completion_detail = 1
 autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
-autocmd FileType typescript nmap <buffer> <Leader>e <Plug>(TsuquyomiRenameSymbol)
 
 autocmd FileType typescript.jsx nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
-autocmd FileType typescript.jsx nmap <buffer> <Leader>e <Plug>(TsuquyomiRenameSymbol)
 map <C-t-d> :TsuTypeDefinition<CR>
 
+""""""""
+" RUBY "
+""""""""
 
+" Convert Condition ,cc
+autocmd FileType ruby nnoremap <leader>cc :RConvertPostConditional<cr>
 
 
 """"""""""""
@@ -215,5 +233,5 @@ map <Leader>n :call RenameFile()<cr>
 " Quick Save "
 """"""""""""""
 map <Leader>w :w<cr>
-map <Leader>q :q!<cr>
+map <Leader>q :q<cr>
 map <Leader>wq :wq<cr>

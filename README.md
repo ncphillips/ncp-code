@@ -20,23 +20,37 @@
 
 * **Toggle NERDTree:** `<C-n>`
 
-### Typescript
+### Code
 
 * **Autocomplete:** `<C-x C-o>`
+* **Rename Symbol:** `,e`
+
+#### Typescript
+
 * **Go to def:** `<C-]>`
 * **Go to use:** `<C-t>`
 * **References:** `<C-^>`
 * **Hint:** `,t`
-* **Rename Symbol:** `,e`
+
+### Ruby
+
+* **Add Parameter:** `,rap`
+* **Convert Post Conditional:** `,rcpc`
+* **Extract Method:** `,rem`
+* **Extract Local Variable:** `,relv`
+* **Convert Conditional:** `,cc`
+
+#### Rails
+
+* **Go to Model:** `:Emodel site`
+* **Go to Controller:** `:Econtroller sites`
+* **Go to Code/Tests:** `:A`
 
 ### Vim Plugin System
 
 * **Install Plugin:** `PlugInstall [name ...]`
 * **Update Plugin:** `PlugUpdate [name ...]`
 * **Upgrade vim-plug:** `PlugUpgrade`
-
-### Misc.
-
 
 ## Plugins 
 

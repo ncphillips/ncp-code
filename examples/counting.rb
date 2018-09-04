@@ -11,5 +11,11 @@ end
 
 something = A.new
 
+if A.new.name
+	puts "Name: #{something.name}"
+end
+
+puts "Name: #{something.name}"
+puts "Name: #{something.name}"
 puts "Name: #{something.name}"
 
