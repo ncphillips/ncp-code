@@ -59,6 +59,11 @@ set ts=2
 set sts=2
 set sw=2
 
+" ruby-vim suggestions
+set nocompatible
+syntax on 
+filetype indent on
+filetype plugin on
 
 
 
