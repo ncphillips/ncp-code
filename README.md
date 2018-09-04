@@ -51,8 +51,16 @@ sh ~/ncp-vim/install
 
 ### Search
 
-* **Search File:** <C-P>
-* **Fulltext Search:** <C-F>
+Quick Options
+
+* **Search File:** `<C-P>`
+* **Fulltext Search:** `<C-F>`
+
+Commands
+
+* Search by Filename: `:Ag`
+* Fulltext Search Files: `:Files`
+* Search Commmits: `:Commits`
 
 ### Code
 
