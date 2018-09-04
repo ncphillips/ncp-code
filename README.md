@@ -1,13 +1,28 @@
 # ncphi vim 
 
+## Setup
+
+```ssh
+cd ~
+
+git clone git@github.com:ncphillips/ncp-vim.git
+
+echo "source ~/ncp-vim/vimrc" >> ~/.vimrc
+echo "source ~/ncp-vim/zshrc" >> ~/.zshrc
+
+sh ~/ncp-vim/install
+```
+
 ## Keybindings
 
-### Keys
+**Legend**
+
 * `C` : The `Ctrl` key
 * `Leader` : The `,` key.
 
 ### Buffers
 
+* **Reload:** `:e`
 * **List Buffers:** `:ls`
 * **Go To Buffer:** `:b <number>`
 * **Delete Buffer:** `:bd`
@@ -31,8 +46,13 @@
 
 * **Toggle NERDTree:** `<C-n>`
 * **Help:** `?`
-* **Open :** `<CR>`
+* **Open:** `<CR>`
 * **Open in Tab:** `t`
+
+### Search
+
+* **Search File:** <C-P>
+* **Fulltext Search:** <C-F>
 
 ### Code
 

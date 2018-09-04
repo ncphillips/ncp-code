@@ -8,39 +8,56 @@ filetype on
 """""""""""
 call plug#begin('~/.vim/plugged')
 
-" ## Defaults
+" Defaults
 Plug 'tpope/vim-sensible'
 
 " Status Bar
 Plug 'vim-airline/vim-airline'
 
-" ## Colors
+" Colors
 Plug 'junegunn/seoul256.vim'
 
-" ## Code Formatting
+" Code Formatting
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
-" ## Javascript/Typescript
+" Javascript/Typescript
 Plug 'Quramy/tsuquyomi'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 
-" ## Ruby
+" Ruby
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'ecomba/vim-ruby-refactoring'
 
-" ## File Browser
+" File Browser
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" ## Git
+" Git
 Plug 'airblade/vim-gitgutter'
+
+" Search
+"Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
 
 call plug#end()
 
+""""""""""
+" Search "
+""""""""""
+let g:ackprg = 'ag --vimgrep'
+" [Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
 
+:nnoremap <C-P> :FZF<cr>
+:nnoremap <C-F> :Ag<cr>
 
+set hlsearch
+" Press Space to turn off highlighting and clear any message already displayed.
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 """""""""""
 " EDITING "
@@ -196,7 +213,7 @@ autocmd FileType javascript.jsx setlocal ts=2 sts=2 sw=2 noexpandtab
 autocmd FileType typescript setlocal ts=2 sts=2 sw=2 noexpandtab
 autocmd FileType typescript.jsx setlocal ts=2 sts=2 sw=2 noexpandtab
 
-autocmd FileType ruby setlocal ts=2 sts=2 sw=2 noexpandtab
+autocmd FileType ruby setlocal ts=4 sts=4 sw=4 noexpandtab
 
 autocmd FileType markdown setlocal ts=2 sts=2 sw=2 noexpandtab
 
