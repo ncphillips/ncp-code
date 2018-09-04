@@ -3,7 +3,7 @@
 ## Keybindings
 ### Keys
 * `C` : The `Ctrl` key
-* `Leader` : The `\` key.
+* `Leader` : The `,` key.
 
 ### Navigation
 
@@ -20,14 +20,18 @@
 * **Go to def:** `<C-]>`
 * **Go to use:** `<C-t>`
 * **References:** `<C-^>`
-* **Hint:** `\t`
-* **Rename Symbol:** `\e`
+* **Hint:** `,t`
+* **Rename Symbol:** `,e`
 
 ### Vim Plugin System
 
 * **Install Plugin:** `PlugInstall [name ...]`
 * **Update Plugin:** `PlugUpdate [name ...]`
 * **Upgrade vim-plug:** `PlugUpgrade`
+
+### Misc.
+
+* **Rename File:** `,n`
 
 ## Plugins 
 
