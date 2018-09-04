@@ -34,18 +34,24 @@
 * [vim-plug](https://github.com/junegunn/vim-plug): Plugin management
 * [vim-sensible](https://github.com/tpope/vim-sensible): ???
 * [seoul256.vim](https://github.com/junegunn/seoul256.vim): A color scheme.
+* [vim-prettier](https://github.com/prettier/vim-prettier)
+
+### Typescript
 * [tsuquyomi](https://github.com/Quramy/tsuquyomi): Typescript development 
   support.
 * [typescript-vim](https://github.com/leafgarland/typescript-vim):
   Typescript syntax highlighting
 * [vim-jsx-typescript](https://github.com/peitalin/vim-jsx-typescript)
   : React JSX syntax highlighting Typescript.
-* [vim-prettier](https://github.com/prettier/vim-prettier)
+
+### Ruby
 * [vim-ruby](https://github.com/vim-ruby/vim-ruby): Ruby dev support.
 * [vim-rails](https://github.com/tpope/vim-rails): Ruby on Rails 
   power tools
 * [vim-ruby-refactoring](https://github.com/ecomba/vim-ruby-refactoring): Ruby refactoring tools
-* [nerdtree](https://github.com/scrooloose/nerdtree): File Browser
+
+### File Browsing
+* [nerdtree](https://github.com/scrooloose/nerdtree)
 * [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin): Add git status to NERDTree browser.
 * [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter): Adds
   git diff (+/-) into the vim gutter.
