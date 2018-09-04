@@ -1,24 +1,38 @@
 # ncphi vim 
 
 ## Keybindings
+
 ### Keys
 * `C` : The `Ctrl` key
 * `Leader` : The `,` key.
 
+### Buffers
+
+* **List Buffers:** `:ls`
+* **Go To Buffer:** `:b <number>`
+* **Delete Buffer:** `:bd`
+
+### Windows
+
+* **Move Left:** `<C-W>h`
+* **Move Left:** `<C-W>l`
+* **Toggle:** `<C-W>w`
+
 ### Files
+
 * **Save:** `,w`
 * **Quit:** `,q`
 * **Save & Quit:** `,wq`
 * **Rename File:** `,n`
-
-### Navigation
-
-* **Page Forward:** `<C-b>`
+* **Page Forward:** `<C-f>`
 * **Page Backward:** `<C-b>`
 
 ### File Browsing 
 
 * **Toggle NERDTree:** `<C-n>`
+* **Help:** `?`
+* **Open :** `<CR>`
+* **Open in Tab:** `t`
 
 ### Code
 

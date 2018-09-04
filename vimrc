@@ -11,6 +11,9 @@ call plug#begin('~/.vim/plugged')
 " ## Defaults
 Plug 'tpope/vim-sensible'
 
+" Status Bar
+Plug 'vim-airline/vim-airline'
+
 " ## Colors
 Plug 'junegunn/seoul256.vim'
 
@@ -35,7 +38,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 
 call plug#end()
-
 
 
 
@@ -68,6 +70,8 @@ filetype plugin on
 
 
 
+
+
 """"""""""
 " COLORS "
 """"""""""
@@ -81,6 +85,10 @@ hi xmlEndTag guifg=#2974a1
 
 
 
+"""""""""""
+" AIRLINE "
+"""""""""""
+let g:airline#extensions#tabline#enabled = 1
 
 
 """""""""""""""""""
@@ -157,10 +165,14 @@ autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx, PrettierAsync
 """"""""""""
 " NERDTree "
 """"""""""""
-map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
+" Toggle NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
+" Exit Vim if NERDTree is the only window
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
 
