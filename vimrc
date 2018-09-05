@@ -48,6 +48,34 @@ call plug#end()
 
 
 
+"""""""""""
+" EDITING "
+"""""""""""
+
+" Enable mouse
+set mouse=a
+
+" Show Line Numbers
+set nu
+
+" Leader Key
+:let mapleader = ","
+
+" Tab Defaults
+set noexpandtab
+set ts=2
+set sts=2
+set sw=2
+
+" ruby-vim suggestions
+set nocompatible
+syntax on 
+filetype indent on
+filetype plugin on
+
+
+
+
 """"""""""
 " Search "
 """"""""""
@@ -84,34 +112,6 @@ command! -bang -nargs=* Ag
 " Likewise, Files command with preview window
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
-
-
-
-
-"""""""""""
-" EDITING "
-"""""""""""
-
-" Enable mouse
-set mouse=a
-
-" Show Line Numbers
-set nu
-
-" Leader Key
-:let mapleader = ","
-
-" Tab Defaults
-set noexpandtab
-set ts=2
-set sts=2
-set sw=2
-
-" ruby-vim suggestions
-set nocompatible
-syntax on 
-filetype indent on
-filetype plugin on
 
 
 
@@ -169,9 +169,6 @@ autocmd FileType ruby vnoremap <leader>c  :RExtractConstant<cr>
 
 " Extract Method ,m
 autocmd FileType ruby noremap <leader>m  :RExtractMethod<cr>
-
-" Extract Function ,f
-
 
 
 
@@ -323,3 +320,4 @@ map <Leader>n :call RenameFile()<cr>
 map <Leader>w :w<cr>
 map <Leader>q :q<cr>
 map <Leader>wq :wq<cr>
+map <Leader>q! :q!<cr>
