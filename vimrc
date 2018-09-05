@@ -49,6 +49,7 @@ call plug#end()
 " Search "
 """"""""""
 let g:ackprg = 'ag --vimgrep'
+
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
 
@@ -56,6 +57,7 @@ let g:fzf_buffers_jump = 1
 :nnoremap <C-F> :Ag!<cr>
 
 set hlsearch
+
 " Press Space to turn off highlighting and clear any message already displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
