@@ -18,17 +18,19 @@ Plug 'vim-airline/vim-airline'
 Plug 'junegunn/seoul256.vim'
 
 " Code Formatting
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
 " Javascript/Typescript
-Plug 'Quramy/tsuquyomi'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
+Plug 'Quramy/tsuquyomi', { 'for': ['typescript', 'typescript.jsx'] } 
+Plug 'leafgarland/typescript-vim', { 'for': ['typescript', 'typescript.jsx'] } 
+Plug 'peitalin/vim-jsx-typescript', { 'for': ['typescript', 'typescript.jsx'] } 
 
 " Ruby
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
-Plug 'ecomba/vim-ruby-refactoring'
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'tpope/vim-rails', { 'for': 'ruby' }
+Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
 
 " File Browser
 Plug 'scrooloose/nerdtree'
@@ -226,12 +228,7 @@ autocmd FileType ruby imap <buffer> <CR> <C-R>=RubyEndToken()<CR>
 "
 " Run Prettier before saving
 " ...when running at every change you may want to disable quickfix
-let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat = 0
-
-" other options: TextChanged,InsertLeave 
-autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx, PrettierAsync
-
 
 
 

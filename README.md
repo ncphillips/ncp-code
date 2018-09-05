@@ -112,16 +112,24 @@ Commands
 ### Ruby
 
 * [vim-ruby](https://github.com/vim-ruby/vim-ruby): Ruby dev support.
-* [vim-rails](https://github.com/tpope/vim-rails): Ruby on Rails
   power tools
+* [vim-rails](https://github.com/tpope/vim-rails): Ruby on Rails
 * [vim-ruby-refactoring](https://github.com/ecomba/vim-ruby-refactoring): Ruby refactoring tools
 
 ### File Browsing
 
 * [nerdtree](https://github.com/scrooloose/nerdtree)
 * [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin): Add git status to NERDTree browser.
+
+### Git
 * [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter): Adds
   git diff (+/-) into the vim gutter.
+
+### Search
+
+* [fzf](https://github.com/junegunn/fzf)
+* [fzf-vim](https://github.com/junegunn/fzf-vim)
+* [ack.vim](https://github.com/mileszs/ack.vim')
 
 ## How do I...
 
