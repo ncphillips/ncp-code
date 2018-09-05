@@ -1,23 +1,50 @@
-# ncphi 
+# ncp-code 
 
-## Setup
+This repo contains everything I need for editing code. It is currently 
+made to make working with `ruby` and `typescript` quite pleasant. 
+
+It consists of:
+
+* zsh commands 
+* vim configuration
+
+
+## Getting Started
+
+### Install
 
 ```ssh
 cd ~
 
-git clone git@github.com:ncphillips/ncp-vim.git
-
-echo "source ~/ncp-vim/vimrc" >> ~/.vimrc
-echo "source ~/ncp-vim/zshrc" >> ~/.zshrc
+git clone git@github.com:ncphillips/ncp-code.git
 
 sh ~/ncp-vim/install
 ```
 
-## zsh commands
+### Update
 
-* `o`: Runs a function that opens a file picked from fzf in Vim.
+```
+cd ~/ncp-code
+git pull
+```
 
-## Vim Keybindings
+If changes were made to zshrc:
+
+```zsh
+$ source ~/.zshrc
+```
+
+If changes were made to the vimrc:
+
+```vim
+:source ~/.vimrc
+```
+
+## Zsh
+
+* `o`: Search for a file to open in Vim.
+
+## Vim
 
 **Legend**
 
@@ -26,7 +53,9 @@ sh ~/ncp-vim/install
 
 ### Buffers
 
-* **Reload:** `:e`
+<!-- TODO: Write about buffers and how they can be used. -->
+
+* **Reload:** `:e` 
 * **List Buffers:** `:ls`
 * **Go To Buffer:** `:b <number>`
 * **Delete Buffer:** `:bd`
@@ -52,6 +81,8 @@ sh ~/ncp-vim/install
 * **Open:** `<CR>`
 * **Open in Tab:** `t`
 
+<!-- NERDTree ScreenShot  -->
+
 ### Search
 
 Quick Options
@@ -65,10 +96,14 @@ Commands
 * Fulltext Search Files: `:Files`
 * Search Commmits: `:Commits`
 
+<!-- Fulltext Search Gif -->
+<!-- Filename Search Gif -->
+
 ### Code
 
 * **Autocomplete:** `<C-x C-o>`
 * **Rename Symbol:** `,e`
+<!-- Autocomplete Gif for Ruby & Typescript  -->
 
 #### Typescript
 
@@ -76,6 +111,8 @@ Commands
 * **Go to use:** `<C-t>`
 * **References:** `<C-^>`
 * **Hint:** `,t`
+
+<!-- Got to def/use gif -->
 
 ### Ruby
 
