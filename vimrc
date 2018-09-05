@@ -69,7 +69,7 @@ set nu
 :let mapleader = ","
 
 " Tab Defaults
-set noexpandtab
+set expandtab
 set ts=2
 set sts=2
 set sw=2
@@ -80,6 +80,15 @@ syntax on
 filetype indent on
 filetype plugin on
 
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+
+"Invisible character colors
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
 
 
 
@@ -91,8 +100,8 @@ let g:ackprg = 'ag --vimgrep'
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
 
-:nnoremap <leader>o :Files!<cr>
-:nnoremap <leader>f :Ag!<cr>
+:nnoremap <leader>o :Files<cr>
+:nnoremap <leader>f :Ag<cr>
 
 set hlsearch
 
@@ -267,15 +276,15 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
 
-autocmd FileType json setlocal ts=2 sts=2 sw=2 noexpandtab
-autocmd FileType javascript setlocal ts=2 sts=2 sw=2 noexpandtab
-autocmd FileType javascript.jsx setlocal ts=2 sts=2 sw=2 noexpandtab
-autocmd FileType typescript setlocal ts=2 sts=2 sw=2 noexpandtab
-autocmd FileType typescript.jsx setlocal ts=2 sts=2 sw=2 noexpandtab
+autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType javascript.jsx setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType typescript setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType typescript.jsx setlocal ts=2 sts=2 sw=2 expandtab
 
-autocmd FileType ruby setlocal ts=4 sts=4 sw=4 noexpandtab
+autocmd FileType ruby setlocal ts=4 sts=4 sw=4 expandtab
 
-autocmd FileType markdown setlocal ts=2 sts=2 sw=2 noexpandtab
+autocmd FileType markdown setlocal ts=2 sts=2 sw=2 expandtab
 
 autocmd FileType sh setlocal ts=4 sts=4 sw=4 noexpandtab
 

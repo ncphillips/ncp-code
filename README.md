@@ -134,6 +134,10 @@ Commands
 * **Update Plugin:** `PlugUpdate [name ...]`
 * **Upgrade vim-plug:** `PlugUpgrade`
 
+### Misc.
+
+* **Show Invisible Characters (Tabs, EOL):** `,l`
+
 ## Plugins
 
 * [vim-plug](https://github.com/junegunn/vim-plug): Plugin management
