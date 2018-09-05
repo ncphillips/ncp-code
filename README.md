@@ -1,4 +1,4 @@
-# ncphi vim
+# ncphi 
 
 ## Setup
 
@@ -13,7 +13,11 @@ echo "source ~/ncp-vim/zshrc" >> ~/.zshrc
 sh ~/ncp-vim/install
 ```
 
-## Keybindings
+## zsh commands
+
+* `o`: Runs a function that opens a file picked from fzf in Vim.
+
+## Vim Keybindings
 
 **Legend**
 
@@ -142,3 +146,4 @@ so this is a list of plugins that I might add later.
 * [commentary.vim](https://vimawesome.com/plugin/commentary-vim)
 * [vim-graphql](https://vimawesome.com/plugin/vim-graphql)
 * [vim-styled-components](https://vimawesome.com/plugin/vim-styled-components-hard-things)
+* [dispatch.vim](https://vimawesome.com/plugin/vim-dispatch)
