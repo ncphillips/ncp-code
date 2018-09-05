@@ -138,36 +138,22 @@ Commands
 
 * [vim-plug](https://github.com/junegunn/vim-plug): Plugin management
 * [vim-sensible](https://github.com/tpope/vim-sensible): ???
-* [seoul256.vim](https://github.com/junegunn/seoul256.vim): A color scheme.
-* [vim-prettier](https://github.com/prettier/vim-prettier)
 * [vim-surround](https://github.com/tpope/vim-surround)
-
-### Typescript
-
-* [tsuquyomi](https://github.com/Quramy/tsuquyomi): Typescript development
-  support.
-* [typescript-vim](https://github.com/leafgarland/typescript-vim):
-  Typescript syntax highlighting
-* [vim-jsx-typescript](https://github.com/peitalin/vim-jsx-typescript)
-  : React JSX syntax highlighting Typescript.
-
-### Ruby
-
-* [vim-ruby](https://github.com/vim-ruby/vim-ruby): Ruby dev support.
-  power tools
-* [vim-rails](https://github.com/tpope/vim-rails): Ruby on Rails
-* [vim-ruby-refactoring](https://github.com/ecomba/vim-ruby-refactoring): Ruby refactoring tools
-
-### File Browsing
+* [seoul256.vim](https://github.com/junegunn/seoul256.vim): A color scheme.
+* [vim-gitgutter](https://github.com/airblade/vim-gitgutter): Adds git diff (+/-) into the vim gutter.
 
 * [nerdtree](https://github.com/scrooloose/nerdtree)
 * [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin): Add git status to NERDTree browser.
 
-### Git
-* [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter): Adds
-  git diff (+/-) into the vim gutter.
+* [vim-prettier](https://github.com/prettier/vim-prettier)
 
-### Search
+* [vim-ruby](https://github.com/vim-ruby/vim-ruby): Ruby dev support.  
+* [vim-ruby-refactoring](https://github.com/ecomba/vim-ruby-refactoring): Ruby refactoring tools
+* [vim-rails](https://github.com/tpope/vim-rails): Ruby on Rails power tools.
+
+* [tsuquyomi](https://github.com/Quramy/tsuquyomi): Typescript development support.
+* [vim-javascript](https://github.com/Quramy/vim-javascript): Javascript syntax highlighting
+* [typescript-vim](https://github.com/leafgarland/typescript-vim): Typescript syntax highlighting
 
 * [fzf](https://github.com/junegunn/fzf)
 * [fzf-vim](https://github.com/junegunn/fzf-vim)
