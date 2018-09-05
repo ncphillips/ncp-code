@@ -132,8 +132,13 @@ Commands
 * [fzf-vim](https://github.com/junegunn/fzf-vim)
 * [ack.vim](https://github.com/mileszs/ack.vim')
 
-## How do I...
 
-* Resize the tabs in split view
-* Specify whether I want a tab to open a new tab
-* Add some margin between open tabs
+## Potential Plugins 
+
+I don't want to overload myself with too much information
+so this is a list of plugins that I might add later.
+
+* [fugitive-vim](https://vimawesome.com/plugin/fugitive-vim)
+* [commentary.vim](https://vimawesome.com/plugin/commentary-vim)
+* [vim-graphql](https://vimawesome.com/plugin/vim-graphql)
+* [vim-styled-components](https://vimawesome.com/plugin/vim-styled-components-hard-things)
