@@ -1,4 +1,4 @@
-# ncphi vim 
+# ncphi vim
 
 ## Setup
 
@@ -27,22 +27,21 @@ sh ~/ncp-vim/install
 * **Go To Buffer:** `:b <number>`
 * **Delete Buffer:** `:bd`
 
-### Windows
-
-* **Move Left:** `<C-W>h`
-* **Move Left:** `<C-W>l`
-* **Toggle:** `<C-W>w`
-
 ### Files
 
 * **Save:** `,w`
 * **Quit:** `,q`
 * **Save & Quit:** `,wq`
 * **Rename File:** `,n`
+
+### Navigating within Files
+
 * **Page Forward:** `<C-f>`
 * **Page Backward:** `<C-b>`
+* **Half-Page Down:** `<C-d>`
+* **Half-Page Up:** `<C-u>`
 
-### File Browsing 
+### File Browsing
 
 * **Toggle NERDTree:** `<C-n>`
 * **Help:** `?`
@@ -53,8 +52,8 @@ sh ~/ncp-vim/install
 
 Quick Options
 
-* **Search File:** `<C-P>`
-* **Fulltext Search:** `<C-F>`
+* **Search File:** `,o`
+* **Fulltext Search:** `,f`
 
 Commands
 
@@ -94,7 +93,7 @@ Commands
 * **Update Plugin:** `PlugUpdate [name ...]`
 * **Upgrade vim-plug:** `PlugUpgrade`
 
-## Plugins 
+## Plugins
 
 * [vim-plug](https://github.com/junegunn/vim-plug): Plugin management
 * [vim-sensible](https://github.com/tpope/vim-sensible): ???
@@ -102,7 +101,8 @@ Commands
 * [vim-prettier](https://github.com/prettier/vim-prettier)
 
 ### Typescript
-* [tsuquyomi](https://github.com/Quramy/tsuquyomi): Typescript development 
+
+* [tsuquyomi](https://github.com/Quramy/tsuquyomi): Typescript development
   support.
 * [typescript-vim](https://github.com/leafgarland/typescript-vim):
   Typescript syntax highlighting
@@ -110,12 +110,14 @@ Commands
   : React JSX syntax highlighting Typescript.
 
 ### Ruby
+
 * [vim-ruby](https://github.com/vim-ruby/vim-ruby): Ruby dev support.
-* [vim-rails](https://github.com/tpope/vim-rails): Ruby on Rails 
+* [vim-rails](https://github.com/tpope/vim-rails): Ruby on Rails
   power tools
 * [vim-ruby-refactoring](https://github.com/ecomba/vim-ruby-refactoring): Ruby refactoring tools
 
 ### File Browsing
+
 * [nerdtree](https://github.com/scrooloose/nerdtree)
 * [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin): Add git status to NERDTree browser.
 * [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter): Adds
@@ -123,8 +125,6 @@ Commands
 
 ## How do I...
 
-
 * Resize the tabs in split view
 * Specify whether I want a tab to open a new tab
 * Add some margin between open tabs
-

@@ -45,6 +45,9 @@ Plug 'mileszs/ack.vim'
 
 call plug#end()
 
+
+
+
 """"""""""
 " Search "
 """"""""""
@@ -53,13 +56,14 @@ let g:ackprg = 'ag --vimgrep'
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
 
-:nnoremap <C-P> :Files!<cr>
-:nnoremap <C-F> :Ag!<cr>
+:nnoremap <leader>o :Files!<cr>
+:nnoremap <leader>f :Ag!<cr>
 
 set hlsearch
 
 " Press Space to turn off highlighting and clear any message already displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
 
 " Augmenting Ag command using fzf#vim#with_preview function
 "   * fzf#vim#with_preview([[options], preview window, [toggle keys...]])
@@ -76,9 +80,12 @@ command! -bang -nargs=* Ag
   \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
   \                 <bang>0)
 
+
 " Likewise, Files command with preview window
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+
 
 
 """""""""""
@@ -109,8 +116,6 @@ filetype plugin on
 
 
 
-
-
 """"""""""
 " COLORS "
 """"""""""
@@ -124,10 +129,13 @@ hi xmlEndTag guifg=#2974a1
 
 
 
+
 """""""""""
 " AIRLINE "
 """""""""""
 let g:airline#extensions#tabline#enabled = 1
+
+
 
 
 """""""""""""""""""
@@ -140,6 +148,7 @@ autocmd BufReadPost *
   \ if line("'\"") > 0 && line("'\"") <= line("$") |
   \   exe "normal g`\"" |
   \ endif
+
 
 
 
@@ -163,6 +172,9 @@ autocmd FileType ruby noremap <leader>m  :RExtractMethod<cr>
 
 " Extract Function ,f
 
+
+
+
 """"""""""""""
 " TYPESCRIPT "
 """"""""""""""
@@ -176,12 +188,17 @@ autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()
 autocmd FileType typescript.jsx nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
 map <C-t-d> :TsuTypeDefinition<CR>
 
+
+
+
 """"""""
 " RUBY "
 """"""""
 
 " Convert Condition ,cc
 autocmd FileType ruby nnoremap <leader>cc :RConvertPostConditional<cr>
+
+
 
 
 """"""""""""
@@ -199,8 +216,6 @@ autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx, PrettierAsync
 
 
 
-
-
 """"""""""""
 " NERDTree "
 """"""""""""
@@ -212,7 +227,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Exit Vim if NERDTree is the only window
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
 
 
 
@@ -264,7 +278,6 @@ inoremap <s-tab> <c-n>
 
 
 
-
 """""""""""""""""""""""
 " RENAME CURRENT FILE "
 """""""""""""""""""""""
@@ -278,6 +291,8 @@ function! RenameFile()
 	endif
 endfunction
 map <Leader>n :call RenameFile()<cr>
+
+
 
 
 """"""""""""""
