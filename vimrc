@@ -22,7 +22,12 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
-" Javascript/Typescript
+" Code
+Plug 'tpope/vim-surround'
+" Javascript
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+
+" Typescript
 Plug 'Quramy/tsuquyomi', { 'for': ['typescript', 'typescript.jsx'] } 
 Plug 'leafgarland/typescript-vim', { 'for': ['typescript', 'typescript.jsx'] } 
 Plug 'peitalin/vim-jsx-typescript', { 'for': ['typescript', 'typescript.jsx'] } 

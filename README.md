@@ -99,6 +99,7 @@ Commands
 * [vim-sensible](https://github.com/tpope/vim-sensible): ???
 * [seoul256.vim](https://github.com/junegunn/seoul256.vim): A color scheme.
 * [vim-prettier](https://github.com/prettier/vim-prettier)
+* [vim-surround](https://github.com/tpope/vim-surround)
 
 ### Typescript
 
