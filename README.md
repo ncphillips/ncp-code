@@ -59,6 +59,8 @@ If changes were made to the vimrc:
 * **List Buffers:** `:ls`
 * **Go To Buffer:** `:b <number>`
 * **Delete Buffer:** `:bd`
+* **Next Buffer:** `<tab>`
+* **Next Buffer:** `<s-tab>`
 
 ### Files
 

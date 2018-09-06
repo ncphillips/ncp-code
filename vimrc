@@ -91,6 +91,11 @@ highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
 
+" Next Buffer
+nnoremap <tab> :bn<cr>
+
+" Previous Buffer
+nnoremap <s-tab> :bp<cr>
 
 """"""""""
 " Search "
@@ -260,7 +265,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Exit Vim if NERDTree is the only window
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
 
 
 
