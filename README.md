@@ -56,17 +56,14 @@ If changes were made to the vimrc:
 <!-- TODO: Write about buffers and how they can be used. -->
 
 * **Reload:** `:e` 
-* **List Buffers:** `:ls`
-* **Go To Buffer:** `:b <number>`
-* **Delete Buffer:** `:bd`
-* **Next Buffer:** `<tab>`
-* **Next Buffer:** `<s-tab>`
+* **List:** `:ls`
+* **Go To:** `:b <number>`
+* **Next :** `<tab>`
+* **Previous:** `<s-tab>`
+* **Delete:** `<C-w>`
 
 ### Files
 
-* **Save:** `,w`
-* **Quit:** `,q`
-* **Save & Quit:** `,wq`
 * **Rename File:** `,n`
 
 ### Navigating within Files
@@ -138,7 +135,7 @@ Commands
 
 ### Misc.
 
-* **Show Invisible Characters (Tabs, EOL):** `,l`
+* **Show Invisible Characters (e.g. Tabs, EOL):** `,l`
 
 ## Plugins
 

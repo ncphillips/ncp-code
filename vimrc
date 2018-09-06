@@ -91,11 +91,18 @@ highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
 
+"""""""""""
+" BUFFERS "
+"""""""""""
+
 " Next Buffer
 nnoremap <tab> :bn<cr>
 
 " Previous Buffer
 nnoremap <s-tab> :bp<cr>
+
+" Close Buffer
+nnoremap <c-w> :bd<cr>
 
 """"""""""
 " Search "
