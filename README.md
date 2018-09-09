@@ -18,7 +18,7 @@ cd ~
 
 git clone git@github.com:ncphillips/ncp-code.git
 
-sh ~/ncp-vim/install
+sh ~/ncp-code/install
 ```
 
 ### Update
