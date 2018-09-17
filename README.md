@@ -157,6 +157,7 @@ Commands
 * [tsuquyomi](https://github.com/Quramy/tsuquyomi): Typescript development support.
 * [vim-javascript](https://github.com/Quramy/vim-javascript): Javascript syntax highlighting
 * [typescript-vim](https://github.com/leafgarland/typescript-vim): Typescript syntax highlighting
+* [vim-styled-components](https://vimawesome.com/plugin/vim-styled-components-hard-things)
 
 * [fzf](https://github.com/junegunn/fzf)
 * [fzf-vim](https://github.com/junegunn/fzf-vim)
@@ -171,5 +172,4 @@ so this is a list of plugins that I might add later.
 * [fugitive-vim](https://vimawesome.com/plugin/fugitive-vim)
 * [commentary.vim](https://vimawesome.com/plugin/commentary-vim)
 * [vim-graphql](https://vimawesome.com/plugin/vim-graphql)
-* [vim-styled-components](https://vimawesome.com/plugin/vim-styled-components-hard-things)
 * [dispatch.vim](https://vimawesome.com/plugin/vim-dispatch)
