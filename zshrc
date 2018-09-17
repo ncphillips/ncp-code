@@ -3,3 +3,7 @@ export FZF_DEFAULT_COMMAND='fd --type f --exclude .git --exclude node_modules --
 function o {
 	vim $(fzf)
 }
+
+function note {
+  vim $(date +%Y-%m-%d).md
+}

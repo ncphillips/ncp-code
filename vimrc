@@ -31,6 +31,7 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'Quramy/tsuquyomi', { 'for': ['typescript', 'typescript.jsx'] } 
 Plug 'leafgarland/typescript-vim', { 'for': ['typescript', 'typescript.jsx'] } 
 Plug 'peitalin/vim-jsx-typescript', { 'for': ['typescript', 'typescript.jsx'] } 
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " Ruby
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
@@ -91,18 +92,31 @@ highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
 
+
+
 """""""""""
 " BUFFERS "
 """""""""""
+function! NextBuffer() 
+  exec ':w'
+  exec ':bn'
+endfunction
+nnoremap <tab> :call NextBuffer()<cr>
 
-" Next Buffer
-nnoremap <tab> :bn<cr>
+function! PrevBuffer() 
+  exec ':w'
+  exec ':bp'
+endfunction
+nnoremap <s-tab> :call PrevBuffer()<cr>
 
-" Previous Buffer
-nnoremap <s-tab> :bp<cr>
+function! CloseBuffer() 
+  exec ':w'
+  exec ':bd'
+endfunction
+nnoremap <c-w> :call CloseBuffer()<cr>
 
-" Close Buffer
-nnoremap <c-w> :bd<cr>
+  
+
 
 """"""""""
 " Search "
@@ -331,9 +345,10 @@ function! RenameFile()
 	if new_name != '' && new_name != old_name
 		exec ':saveas ' . new_name
 		exec ':silent !rm ' .old_name
-		exec redraw!
+		exec e!
 	endif
 endfunction
 map <Leader>n :call RenameFile()<cr>
+
 
 
