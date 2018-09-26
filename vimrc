@@ -18,12 +18,17 @@ Plug 'vim-airline/vim-airline'
 Plug 'junegunn/seoul256.vim'
 
 " Code Formatting
+Plug 'tpope/vim-commentary', {
+  \ 'for': ['javascript', 'typescript', 'vue', 'ruby'] }
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
 " Code
 Plug 'tpope/vim-surround'
+"Plug 'w0rp/ale'
+
+
 " Javascript
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 
@@ -198,6 +203,9 @@ autocmd BufReadPost *
 " CODE "
 """"""""
 
+" Omnicomplete
+let g:ale_completion_enabled = 1
+
 " Rename Symbol ,e
 autocmd FileType ruby vnoremap <leader>e :RRenameLocalVariable<cr>
 autocmd FileType typescript nmap <buffer> <Leader>e <Plug>(TsuquyomiRenameSymbol)
@@ -245,10 +253,12 @@ imap <buffer> <CR> <C-R>=CodeEndToken()<CR>
 " TYPESCRIPT "
 """"""""""""""
 
+let g:tsuquyomi_disable_quickfix = 1
+let g:tsuquyomi_completion_detail = 1
+
 " Set .(j)sx filetypes as typescript.jsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
 
-let g:tsuquyomi_completion_detail = 1
 autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
 
 autocmd FileType typescript.jsx nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
