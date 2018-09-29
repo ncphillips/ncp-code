@@ -346,7 +346,7 @@ autocmd BufNewFile,BufRead *.rss setfiletype xml
 """""""""""""""""""
 function! InsertTabWrapper()
 	let col = col('.') - 1
-	if !col || getline('.')[col - 1] !~ '\k'
+	if !col || getline('.')[col - 1] !~ '[a-zA-Z_:\.]'
 		return "\<tab>"
 	else
 		return "\<c-x>\<c-o>"
