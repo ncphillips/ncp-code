@@ -30,6 +30,7 @@ Plug 'tpope/vim-surround'
 
 " Rust
 Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
 
 " Javascript
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
@@ -255,6 +256,9 @@ autocmd FileType ruby imap <buffer> <CR> <C-R>=CodeEndToken()<CR>
 autocmd FileType rust nmap <Leader>run :w \| !cargo run<CR>
 autocmd FileType rust nmap <Leader>check :w \| !cargo check<CR>
 autocmd FileType rust nmap <Leader>test :w \| !cargo test<CR>
+
+let g:racer_cmd = "/home/user/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
 
 
 """"""""""""""
