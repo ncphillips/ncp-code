@@ -28,6 +28,8 @@ Plug 'prettier/vim-prettier', {
 Plug 'tpope/vim-surround'
 "Plug 'w0rp/ale'
 
+" Rust
+Plug 'rust-lang/rust.vim'
 
 " Javascript
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
@@ -245,8 +247,14 @@ if !exists( "*CodeEndToken" )
 
 endif
 
-imap <buffer> <CR> <C-R>=CodeEndToken()<CR>
+autocmd FileType ruby imap <buffer> <CR> <C-R>=CodeEndToken()<CR>
 
+""""""""
+" RUST "
+""""""""
+autocmd FileType rust nmap <Leader>run :w \| !cargo run<CR>
+autocmd FileType rust nmap <Leader>check :w \| !cargo check<CR>
+autocmd FileType rust nmap <Leader>test :w \| !cargo test<CR>
 
 
 """"""""""""""
