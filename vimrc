@@ -257,7 +257,7 @@ autocmd FileType rust nmap <Leader>run :w \| !cargo run<CR>
 autocmd FileType rust nmap <Leader>check :w \| !cargo check<CR>
 autocmd FileType rust nmap <Leader>test :w \| !cargo test<CR>
 
-let g:racer_cmd = "/home/user/.cargo/bin/racer"
+let g:racer_cmd = "/Users/nolan/.cargo/bin/racer"
 let g:racer_experimental_completer = 1
 
 
