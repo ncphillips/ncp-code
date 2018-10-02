@@ -127,15 +127,15 @@ nnoremap <c-w> :call CloseBuffer()<cr>
 
 
 """"""""""
-" Search "
+" SEARCH "
 """"""""""
 let g:ackprg = 'ag --vimgrep'
 
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
 
-:nnoremap <leader>o :Files<cr>
-:nnoremap <leader>f :Ag<cr>
+:nnoremap <leader>o :w \| Files<cr>
+:nnoremap <leader>f :w \| Ag<cr>
 
 set hlsearch
 
@@ -223,15 +223,29 @@ autocmd FileType ruby vnoremap <leader>c  :RExtractConstant<cr>
 " Extract Method ,m
 autocmd FileType ruby noremap <leader>m  :RExtractMethod<cr>
 
+
+
+
+
 """"""""
 " RUST "
 """"""""
+
+" Run Binary
 autocmd FileType rust nmap <Leader>run :w \| !cargo run<CR>
+
+" Check Compilation
 autocmd FileType rust nmap <Leader>check :w \| !cargo check<CR>
+
+" Run Tests
 autocmd FileType rust nmap <Leader>test :w \| !cargo test<CR>
 
+" Racer – Autocomplete
 let g:racer_cmd = "/Users/nolan/.cargo/bin/racer"
 let g:racer_experimental_completer = 1
+
+
+
 
 
 """"""""""""""
@@ -244,10 +258,15 @@ let g:tsuquyomi_completion_detail = 1
 " Set .(j)sx filetypes as typescript.jsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
 
+" Type Hint
 autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
-
 autocmd FileType typescript.jsx nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
+
+" Type Definition
 map <C-t-d> :TsuTypeDefinition<CR>
+
+
+
 
 
 
