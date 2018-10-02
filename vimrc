@@ -223,33 +223,6 @@ autocmd FileType ruby vnoremap <leader>c  :RExtractConstant<cr>
 " Extract Method ,m
 autocmd FileType ruby noremap <leader>m  :RExtractMethod<cr>
 
-" Autoclose
-if !exists( "*CodeEndToken" )
-
-  function CodeEndToken()
-    let current_line = getline( '.' )
-    let braces_at_end = '{\s*\(|\(,\|\s\|\w\)*|\s*\)\?$'
-    let brackets_at_end = '[\s*\(|\(,\|\s\|\w\)*|\s*\)\?$'
-    let stuff_without_do = '^\s*\(class\|if\|unless\|begin\|case\|for\|module\|while\|until\|def\)'
-      let with_do = 'do\s*\(|\(,\|\s\|\w\)*|\s*\)\?$'
-
-      if match(current_line, brackets_at_end) >= 0
-        return "\<CR>]\<C-O>O"
-			elseif match(current_line, braces_at_end) >= 0
-        return "\<CR>}\<C-O>O"
-      elseif match(current_line, stuff_without_do) >= 0
-        return "\<CR>end\<C-O>O"
-      elseif match(current_line, with_do) >= 0
-        return "\<CR>end\<C-O>O"
-      else
-        return "\<CR>"
-      endif
-    endfunction
-
-endif
-
-autocmd FileType ruby imap <buffer> <CR> <C-R>=CodeEndToken()<CR>
-
 """"""""
 " RUST "
 """"""""
@@ -285,6 +258,34 @@ map <C-t-d> :TsuTypeDefinition<CR>
 
 " Convert Condition ,cc
 autocmd FileType ruby nnoremap <leader>cc :RConvertPostConditional<cr>
+
+" Autoclose
+if !exists( "*CodeEndToken" )
+
+  function CodeEndToken()
+    let current_line = getline( '.' )
+    let braces_at_end = '{\s*\(|\(,\|\s\|\w\)*|\s*\)\?$'
+    let brackets_at_end = '[\s*\(|\(,\|\s\|\w\)*|\s*\)\?$'
+    let stuff_without_do = '^\s*\(class\|if\|unless\|begin\|case\|for\|module\|while\|until\|def\)'
+      let with_do = 'do\s*\(|\(,\|\s\|\w\)*|\s*\)\?$'
+
+      if match(current_line, brackets_at_end) >= 0
+        return "\<CR>]\<C-O>O"
+			elseif match(current_line, braces_at_end) >= 0
+        return "\<CR>}\<C-O>O"
+      elseif match(current_line, stuff_without_do) >= 0
+        return "\<CR>end\<C-O>O"
+      elseif match(current_line, with_do) >= 0
+        return "\<CR>end\<C-O>O"
+      else
+        return "\<CR>"
+      endif
+    endfunction
+
+endif
+
+autocmd FileType ruby imap <buffer> <CR> <C-R>=CodeEndToken()<CR>
+
 
 
 """"""""""""
