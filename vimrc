@@ -105,23 +105,35 @@ highlight SpecialKey guifg=#4a4a59
 """""""""""
 " BUFFERS "
 """""""""""
+" These three functions are for tabbing between and closing buffers.
+" If the current file has unsaved changes, those changes will be 
+" saved before performing the action.
+
 function! NextBuffer() 
-  exec ':w'
+  if &mod
+    exec ':w'
+  endif
   exec ':bn'
 endfunction
 nnoremap <tab> :call NextBuffer()<cr>
 
 function! PrevBuffer() 
-  exec ':w'
+  if &mod
+    exec ':w'
+  endif
   exec ':bp'
 endfunction
 nnoremap <s-tab> :call PrevBuffer()<cr>
 
 function! CloseBuffer() 
-  exec ':w'
+  if &mod
+    exec ':w'
+  endif
+
   exec ':bd'
 endfunction
 nnoremap <c-w> :call CloseBuffer()<cr>
+
 
   
 
