@@ -135,7 +135,11 @@ function! CloseBuffer()
 endfunction
 nnoremap <Leader>w :call CloseBuffer()<cr>
 
-
+" Move around splits with <c-hjkl>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
   
 
 
@@ -213,6 +217,11 @@ autocmd BufReadPost *
   \ endif
 
 
+""""""""""""""""""
+" MISC KEYS MAPS "
+""""""""""""""""""
+
+imap <c-l> <space>=><space>
 
 
 """"""""
