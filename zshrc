@@ -3,7 +3,12 @@ export FZF_DEFAULT_COMMAND='fd --type f --exclude .git --exclude node_modules --
 alias g=git
 
 function o {
-	vim $(fzf)
+  A="$(fzf)"
+  
+  if [ "$A" != "" ] 
+  then
+    vim $A;
+  fi
 }
 
 function note {
