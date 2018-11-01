@@ -51,6 +51,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Git
+Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " Search
@@ -132,7 +133,7 @@ function! CloseBuffer()
 
   exec ':bd'
 endfunction
-nnoremap <c-w> :call CloseBuffer()<cr>
+nnoremap <Leader>w :call CloseBuffer()<cr>
 
 
   
