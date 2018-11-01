@@ -27,7 +27,7 @@ To use the Git Config, add the following to your `~/.git-config`:
 ```
 [include]
   path = ~/ncp-code/gitconfig
-
+```
 
 ### Update
 
