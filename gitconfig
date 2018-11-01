@@ -5,6 +5,8 @@
   amend = commit --amend
   aa = add --all
 
+  shred  = "!source ~/ncp-code/githelpers && shred_git_branches"
+
   l = "!source ~/ncp-code/githelpers && pretty_git_log"
   la = !git l --all
   r = !GIT_NO_PAGER=1 git l -30

@@ -47,3 +47,6 @@ pretty_git_branch() {
     git branch -v --color=always --format=${BRANCH_FORMAT} $* | pretty_git_format
 }
 
+shred_git_branches() {
+	git branch $* | grep -v \* | grep -v master | xargs git branch -D
+}
