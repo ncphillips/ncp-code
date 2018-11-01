@@ -7,6 +7,7 @@ It consists of:
 
 * zsh commands 
 * vim configuration
+* git config
 
 
 ## Getting Started
@@ -20,6 +21,13 @@ git clone git@github.com:ncphillips/ncp-code.git
 
 sh ~/ncp-code/install
 ```
+
+To use the Git Config, add the following to your `~/.git-config`:
+
+```
+[include]
+  path = ~/ncp-code/gitconfig
+
 
 ### Update
 
