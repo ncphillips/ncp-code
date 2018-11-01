@@ -1,8 +1,11 @@
 [alias]
   s = status
   c = commit
+  cm = commit -m 
   co = checkout
   amend = commit --amend
+  d = diff
+  a = add
   aa = add --all
 
   shred  = "!source ~/ncp-code/githelpers && shred_git_branches"
