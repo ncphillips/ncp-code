@@ -415,4 +415,39 @@ endfunction
 map <Leader>n :call RenameFile()<cr>
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CREATE NEW FILE                                   "
+" Crates a new file relative to the current file.   "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! CreateFile() 
+	let new_name = input('New file name: ', '', 'file')
 
+	if new_name != '' 
+    let path = getcwd()
+    let new_file_path = path . "/" . new_name
+
+    if filereadable(new_file_path)
+      echo "File already exists"
+    else
+      exec ":e " . new_file_path
+    endif
+  endif
+
+endfunction
+nmap <Leader>cf :call CreateFile()<CR>
+
+"""""""""""""""""""""""""""""""""""""
+" CREATE PARENT DIRECTORIES ON SAVE "
+"""""""""""""""""""""""""""""""""""""
+function s:MkNonExDir(file, buf)
+    if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
+        let dir=fnamemodify(a:file, ':h')
+        if !isdirectory(dir)
+            call mkdir(dir, 'p')
+        endif
+    endif
+endfunction
+augroup BWCCreateDir
+    autocmd!
+    autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
+augroup END
