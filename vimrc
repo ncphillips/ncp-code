@@ -26,6 +26,7 @@ Plug 'prettier/vim-prettier', {
 
 " Code
 Plug 'tpope/vim-surround'
+Plug 'zxqfl/tabnine-vim', { 'for': [ 'ruby', 'rust', 'json', 'yaml', 'toml' ] }
 "Plug 'w0rp/ale'
 
 " Rust
@@ -100,6 +101,10 @@ set listchars=tab:▸\ ,eol:¬
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
+
+" Copy/Past from System Clipboard
+noremap <Leader>y "*y
+noremap <Leader>p "*p
 
 
 
