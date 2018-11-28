@@ -16,3 +16,4 @@
   r = !GIT_NO_PAGER=1 git l -30
   ra = !git r --all
   b = "!source ~/ncp-code/githelpers && pretty_git_branch"
+  shove = git rev-parse --abbrev-ref HEAD | xargs git push --set-upstream origin
