@@ -14,5 +14,7 @@ function o {
 }
 
 function note {
-  vim $(date +%Y-%m-%d).md
+  currentDate="$(date +%Y-%m-%d)"
+  currentFile="$currentDate.md"
+  vim $currentFile && git add $currentFile && git commit -m "Updated notes for $currentDate" && git push
 }

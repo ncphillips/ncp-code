@@ -376,7 +376,7 @@ autocmd FileType javascript.jsx setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType typescript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType typescript.jsx setlocal ts=2 sts=2 sw=2 expandtab
 
-autocmd FileType ruby setlocal ts=4 sts=4 sw=4 expandtab
+autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 
 autocmd FileType markdown setlocal ts=2 sts=2 sw=2 expandtab
 
