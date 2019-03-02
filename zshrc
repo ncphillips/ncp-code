@@ -14,7 +14,13 @@ function o {
 }
 
 function note {
+  startingDir=$(pwd)
+  cd ~/notes
   currentDate="$(date +%Y-%m-%d)"
   currentFile="$currentDate.md"
-  vim $currentFile && git add $currentFile && git commit -m "Updated notes for $currentDate" && git push
+  vim $currentFile 
+  git add $currentFile 
+  git commit -m "Updated notes for $currentDate" 
+  git push
+  cd $startingDir
 }
