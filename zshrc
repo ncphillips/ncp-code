@@ -5,11 +5,28 @@ alias cl=clear
 alias g=git
 
 function o {
-  A="$(fzf)"
+  filename="$(fzf)"
   
-  if [ "$A" != "" ] 
+  if [ "$filename" != "" ] 
   then
-    vim $A;
+    vim $filename;
+  fi
+}
+
+function f {
+  filename=$(
+    ag \
+      --nogroup \
+      --column \
+      --skip-vcs-ignores \
+      --nonumbers . | \
+      fzf -0 -1| \
+      awk -F: '{print $1}'
+  )
+
+  if [ "$filename" != "" ] 
+  then
+    vim $filename;
   fi
 }
 
