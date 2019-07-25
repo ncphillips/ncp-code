@@ -3,6 +3,7 @@ export FZF_DEFAULT_COMMAND='fd --type f --exclude .git --exclude node_modules --
 alias cl=clear
 
 alias g=git
+alias p3=python3
 
 function o {
   A="$(fzf)"

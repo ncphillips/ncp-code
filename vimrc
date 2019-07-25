@@ -26,7 +26,7 @@ Plug 'prettier/vim-prettier', {
 
 " Code
 Plug 'tpope/vim-surround'
-Plug 'zxqfl/tabnine-vim', { 'for': [ 'ruby', 'rust', 'json', 'yaml', 'toml' ] }
+Plug 'zxqfl/tabnine-vim', { 'for': [ 'ruby', 'rust', 'json', 'yaml', 'toml', 'python' ] }
 "Plug 'w0rp/ale'
 
 " Rust
@@ -35,6 +35,9 @@ Plug 'racer-rust/vim-racer'
 
 " Javascript
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+
+" Vue
+Plug 'posva/vim-vue'
 
 " Typescript
 Plug 'Quramy/tsuquyomi', { 'for': ['typescript', 'typescript.jsx'] } 
@@ -440,19 +443,3 @@ function! CreateFile()
 
 endfunction
 nmap <Leader>cf :call CreateFile()<CR>
-
-"""""""""""""""""""""""""""""""""""""
-" CREATE PARENT DIRECTORIES ON SAVE "
-"""""""""""""""""""""""""""""""""""""
-function s:MkNonExDir(file, buf)
-    if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
-        let dir=fnamemodify(a:file, ':h')
-        if !isdirectory(dir)
-            call mkdir(dir, 'p')
-        endif
-    endif
-endfunction
-augroup BWCCreateDir
-    autocmd!
-    autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
-augroup END
