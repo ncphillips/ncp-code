@@ -26,7 +26,6 @@ Plug 'prettier/vim-prettier', {
 
 " Code
 Plug 'tpope/vim-surround'
-Plug 'zxqfl/tabnine-vim', { 'for': [ 'ruby', 'rust', 'json', 'yaml', 'toml', 'python' ] }
 "Plug 'w0rp/ale'
 
 " Rust
