@@ -12,6 +12,15 @@ It consists of:
 
 ## Getting Started
 
+## vim-plug
+
+Make sure `vim-plug` is installed first:
+
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
 ### Install
 
 ```ssh
