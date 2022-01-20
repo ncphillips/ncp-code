@@ -31,7 +31,7 @@ git clone git@github.com:ncphillips/ncp-code.git
 sh ~/ncp-code/install
 ```
 
-To use the Git Config, add the following to your `~/.git-config`:
+To use the Git Config, add the following to your `~/.gitconfig`:
 
 ```
 [include]
