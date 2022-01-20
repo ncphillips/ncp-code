@@ -5,5 +5,5 @@ brew install fzf
 echo "source ~/ncp-code/vimrc" >> ~/.vimrc
 echo "source ~/ncp-code/zshrc" >> ~/.zshrc
 
-source "~/.zsh"
+source "~/.zshrc"
 
