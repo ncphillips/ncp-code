@@ -1,9 +1,0 @@
-brew install fd
-brew install the_silver_searcher
-brew install fzf
-
-echo "source ~/ncp-code/vimrc" >> ~/.vimrc
-echo "source ~/ncp-code/zshrc" >> ~/.zshrc
-
-source "~/.zshrc"
-

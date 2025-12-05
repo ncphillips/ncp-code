@@ -1,0 +1,149 @@
+#!/bin/bash
+
+set -e
+
+REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+NC='\033[0m' # No Color
+
+info() {
+  echo -e "${GREEN}[✓]${NC} $1"
+}
+
+warn() {
+  echo -e "${YELLOW}[!]${NC} $1"
+}
+
+error() {
+  echo -e "${RED}[✗]${NC} $1"
+}
+
+# Check if a command exists
+check_command() {
+  command -v "$1" &> /dev/null
+}
+
+# Check dependencies
+check_dependencies() {
+  local missing=()
+
+  echo "Checking dependencies..."
+
+  if check_command brew; then
+    info "Homebrew is installed"
+  else
+    error "Homebrew is not installed"
+    echo "  Install from: https://brew.sh"
+    missing+=("brew")
+  fi
+
+  if check_command fd; then
+    info "fd is installed"
+  else
+    warn "fd is not installed"
+    missing+=("fd")
+  fi
+
+  if check_command ag; then
+    info "the_silver_searcher (ag) is installed"
+  else
+    warn "the_silver_searcher (ag) is not installed"
+    missing+=("the_silver_searcher")
+  fi
+
+  if check_command fzf; then
+    info "fzf is installed"
+  else
+    warn "fzf is not installed"
+    missing+=("fzf")
+  fi
+
+  if [ ${#missing[@]} -gt 0 ]; then
+    echo ""
+    if [[ " ${missing[*]} " =~ " brew " ]]; then
+      error "Homebrew is required. Please install it first."
+      exit 1
+    fi
+
+    echo "Missing dependencies: ${missing[*]}"
+    read -p "Install missing dependencies with Homebrew? [y/N] " -n 1 -r
+    echo ""
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+      for dep in "${missing[@]}"; do
+        echo "Installing $dep..."
+        brew install "$dep"
+      done
+    else
+      warn "Skipping dependency installation"
+    fi
+  fi
+}
+
+# Add source line to a config file if not already present
+add_source_line() {
+  local source_line="$1"
+  local target_file="$2"
+
+  if [ -f "$target_file" ]; then
+    if grep -qF "$source_line" "$target_file"; then
+      info "$target_file already sources ncp-code"
+    else
+      echo "$source_line" >> "$target_file"
+      info "Added source line to $target_file"
+    fi
+  else
+    echo "$source_line" > "$target_file"
+    info "Created $target_file with source line"
+  fi
+}
+
+# Setup configuration files
+setup_configs() {
+  echo ""
+  echo "Setting up configuration files..."
+
+  # zshrc
+  add_source_line "source $REPO_DIR/zshrc" "$HOME/.zshrc"
+
+  # gitconfig - needs special handling
+  local gitconfig_include="[include]
+    path = $REPO_DIR/gitconfig"
+
+  if [ -f "$HOME/.gitconfig" ]; then
+    if grep -qF "path = $REPO_DIR/gitconfig" "$HOME/.gitconfig"; then
+      info "~/.gitconfig already includes ncp-code gitconfig"
+    else
+      echo "" >> "$HOME/.gitconfig"
+      echo "$gitconfig_include" >> "$HOME/.gitconfig"
+      info "Added include to ~/.gitconfig"
+    fi
+  else
+    echo "$gitconfig_include" > "$HOME/.gitconfig"
+    info "Created ~/.gitconfig with include"
+  fi
+}
+
+# Main
+main() {
+  echo "========================================"
+  echo "  ncp-code dotfiles installer"
+  echo "========================================"
+  echo ""
+
+  check_dependencies
+  setup_configs
+
+  echo ""
+  echo "========================================"
+  info "Installation complete!"
+  echo "========================================"
+  echo ""
+  echo "Restart your shell or run:"
+  echo "  source ~/.zshrc"
+}
+
+main
