@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "read:**",
+      "edit:**"
+    ]
+  },
+  "env": {
+    "EDITOR": "vim"
+  }
+}
