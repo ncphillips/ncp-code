@@ -5,6 +5,15 @@ alias cl=clear
 alias g=git
 alias p3=python3
 
+#---------#
+# jujutsu #
+#---------#
+alias j=jj
+alias jl="clear && jj log"
+
+source <(COMPLETE=zsh jj)
+
+
 function o {
   filename="$(fzf)"
   
