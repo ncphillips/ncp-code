@@ -10,10 +10,19 @@ alias p3=python3
 #---------#
 alias j=jj
 alias jl="clear && jj log"
+alias jf="jj git fetch"
+alias jpg="jj git push"
+alias js="jj st"
+alias jc="jj commit"
+alias jd="jj desc"
+alias jn="jj new"
 
 source <(COMPLETE=zsh jj)
 
 
+#------#
+# Open #
+#------#
 function o {
   filename="$(fzf)"
   
